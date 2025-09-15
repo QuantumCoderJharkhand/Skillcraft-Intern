@@ -1,18 +1,21 @@
 # 📝 To-Do List Web App
 
 A simple and responsive **To-Do List Application** built using **HTML, CSS, and JavaScript**.  
-This app allows users to add tasks with due dates, view them in a styled list, and delete them when completed.  
+This app allows users to add tasks with due dates, manage them in a styled list, mark them as completed, edit, and delete when necessary.  
 
 ---
 
-## Features
+## 🚀 Features
 - ✅ Add tasks with a **title** and **due date & time**  
 - ⏰ Live date & time display in the header  
-- 🗑️ Delete tasks easily  
+- ✔️ Mark tasks as **Completed**  
+- ✏️ Edit tasks easily  
+- 🗑️ Delete tasks when done  
 - 🎨 Clean and modern **orange-themed UI**  
 - 📱 Responsive layout for all devices  
 
 ---
+
 
 ## 🛠️ Technologies Used
 - **HTML5** – Structure  
