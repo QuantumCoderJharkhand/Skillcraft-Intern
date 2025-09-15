@@ -16,6 +16,11 @@ This app allows users to add tasks with due dates, manage them in a styled list,
 
 ---
 
+## 📂 Project Structure
+index.html # Main HTML file
+style.css # Stylesheet
+script.js # JavaScript functionality
+
 
 ## 🛠️ Technologies Used
 - **HTML5** – Structure  
