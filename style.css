@@ -93,3 +93,8 @@ form button:hover {
 .task-item button:hover {
     color: #e64a19;
 }
+
+.task-item.completed .task-details span:first-child {
+    text-decoration: line-through;
+    color: gray;
+}
