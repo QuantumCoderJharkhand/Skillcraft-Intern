@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+
+       
+       document.addEventListener("DOMContentLoaded", () => {
     const datetimeElement = document.getElementById("datetime");
     const taskForm = document.getElementById("todo-form");
     const taskInput = document.getElementById("taskInput");
@@ -38,6 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
         taskDetails.appendChild(titleEl);
         taskDetails.appendChild(dueEl);
 
+        // --- Buttons ---
+        // Complete button
+        const completeBtn = document.createElement("button");
+        completeBtn.textContent = "✔️";
+        completeBtn.title = "Mark as Completed";
+        completeBtn.addEventListener("click", () => {
+            taskItem.classList.toggle("completed");
+        });
+
+        // Edit button
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "✏️";
+        editBtn.title = "Edit Task";
+        editBtn.addEventListener("click", () => {
+            const newTitle = prompt("Edit Task Title:", titleEl.textContent);
+            if (newTitle !== null && newTitle.trim() !== "") {
+                titleEl.textContent = newTitle.trim();
+            }
+            const newDueDate = prompt("Edit Due Date (YYYY-MM-DD HH:MM):", dueDate);
+            if (newDueDate !== null && newDueDate.trim() !== "") {
+                dueEl.textContent = "Due: " + new Date(newDueDate).toLocaleString();
+            }
+        });
+
+        // Delete button
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "🗑️";
         deleteBtn.title = "Delete Task";
@@ -45,7 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
             taskItem.remove();
         });
 
+        // Append
         taskItem.appendChild(taskDetails);
+        taskItem.appendChild(completeBtn);
+        taskItem.appendChild(editBtn);
         taskItem.appendChild(deleteBtn);
 
         taskList.appendChild(taskItem);
