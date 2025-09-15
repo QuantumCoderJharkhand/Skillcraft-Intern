@@ -1,6 +1,4 @@
-
-       
-       document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const datetimeElement = document.getElementById("datetime");
     const taskForm = document.getElementById("todo-form");
     const taskInput = document.getElementById("taskInput");
@@ -84,3 +82,4 @@
         taskForm.reset();
     });
 });
+
